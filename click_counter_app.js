@@ -45,6 +45,7 @@ var serverPort = 3009;
 http.createServer(function (request, response) {
     if(request.method === "GET") {
         if (request.url == "/clicks/Chart.min.js") {
+            response.setHeader('content-type', 'text/javascript');
             response.write(chartJS);
             response.end();
         }
@@ -74,6 +75,7 @@ http.createServer(function (request, response) {
                     });
                     var responseString = chartPagePart1 + JSON.stringify(chartData) + chartPagePart2;
                     //console.log(responseString);
+                    response.setHeader('content-type', 'text/html');
                     response.write(responseString);
                     response.end();
                 }

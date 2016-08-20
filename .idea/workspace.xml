@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b1a5921-bea5-4fc3-aa93-b8ffb855f0fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clicks/Chart.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chartPagePart1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chartPagePart2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/click_counter_app.js" afterPath="$PROJECT_DIR$/click_counter_app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythagorclickcounter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="click_counter_app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="click_counter_app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/click_counter_app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.7363254">
+              <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -39,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartPagePart1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chartPagePart1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chartPagePart1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20991254">
+            <state vertical-scroll-proportion="-5.3333335">
               <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
               <folding />
             </state>
@@ -77,9 +73,9 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/chartPagePartTwo.html" />
-        <option value="$PROJECT_DIR$/click_counter_app.js" />
         <option value="$PROJECT_DIR$/chartPagePart2.html" />
         <option value="$PROJECT_DIR$/chartPagePart1.html" />
+        <option value="$PROJECT_DIR$/click_counter_app.js" />
       </list>
     </option>
   </component>
@@ -345,16 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/click_counter_app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chartPagePart2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6666665">
@@ -365,9 +351,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chartPagePart1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20991254">
+        <state vertical-scroll-proportion="-5.3333335">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/click_counter_app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7363254">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
