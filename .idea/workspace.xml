@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b1a5921-bea5-4fc3-aa93-b8ffb855f0fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/click_counter_app.js" afterPath="$PROJECT_DIR$/click_counter_app.js" />
-    </list>
+    <list default="true" id="3b1a5921-bea5-4fc3-aa93-b8ffb855f0fa" name="Default" comment="" />
     <ignored path="pythagorclickcounter.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
