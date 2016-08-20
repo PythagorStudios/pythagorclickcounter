@@ -11,6 +11,9 @@ var connectionData = JSON.parse(fs.readFileSync('/home/finnb/nodejs-mysql.cfg'))
 connectionData.database = 'pythagortraffic';
 console.log("Done.");
 
+var chartPagePart1 = fs.readFileSync("chartPagePart1.html");
+var chartPagePart2 = fs.readFileSync("chartPagePart2.html");
+var chartJS = fs.readFileSync("./clicks/Chart.min.js");
 
 var query = function(string, callback) {
     var connection = mysql.createConnection(connectionData);
@@ -41,15 +44,41 @@ query("CREATE TABLE IF NOT EXISTS Clicks (id INT UNIQUE AUTO_INCREMENT, date TIM
 var serverPort = 3009;
 http.createServer(function (request, response) {
     if(request.method === "GET") {
-        query("SELECT COUNT(*) as clickCount FROM Clicks;", function(rows) {
-            if (rows == null || rows.length == 0)
-            {
-                console.log("Failed to count clicks.");
-                response.end("N/A");
-            }
-            response.write(rows[0].clickCount.toString());
+        if (request.url == "/clicks/Chart.min.js") {
+            response.write(chartJS);
             response.end();
-        });
+        }
+        else if (request.url == "/clicks/count") {
+            query("SELECT COUNT(*) as clickCount FROM Clicks;", function (rows) {
+                if (rows == null || rows.length == 0) {
+                    console.log("Failed to count clicks.");
+                    response.end("N/A");
+                }
+                else {
+                    response.write(rows[0].clickCount.toString());
+                    response.end();
+                }
+            });
+        }
+        else if (request.url == "/clicks/chart") {
+            query("SELECT COUNT(1) AS clicks, DATE(date) as date FROM Clicks WHERE date >= DATE_FORMAT(CURDATE(),'%Y-%m-01') GROUP BY DATE(date);", function (rows) {
+                if (rows == null || rows.length == 0) {
+                    console.log("Failed to get clicks.");
+                    response.end("N/A");
+                }
+                else {
+                    var chartData = { labels: [], values: []};
+                    rows.forEach(function (row) {
+                        chartData.labels.push(new Date(row.date).getDate());
+                        chartData.values.push(row.clicks);
+                    });
+                    var responseString = chartPagePart1 + JSON.stringify(chartData) + chartPagePart2;
+                    //console.log(responseString);
+                    response.write(responseString);
+                    response.end();
+                }
+            });
+        }
     } else if(request.method === "POST") {
         query("INSERT INTO Clicks () VALUES ();", function(rows) {
             if (rows == null)
